@@ -1,0 +1,11 @@
+/.metadata/
+
+# eclipse setting files
+.cproject
+.project
+.settings/
+RemoteSystemsTempFiles/
+
+# build generated
+Debug/
+Release/
