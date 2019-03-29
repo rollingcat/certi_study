@@ -1,9 +1,3 @@
-/*
- * user_2-dim.cpp
- *
- *  Created on: Mar 28, 2019
- *      Author: hyowon
- */
 
 int tmp[4][4];
 

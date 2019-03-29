@@ -1,19 +1,18 @@
-//============================================================================
-// Name        : 2dim_rotate.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+/*
+2-Dim 회전을 연습한다.
 
-//#include <iostream>
-//using namespace std;
-//
-//int main() {
-//	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-//	return 0;
-//}
+시계방향(0: clockwise) 회전과 반시계방향(1: counterclockwise)을 연습한다.
 
+구현해야 하는 함수는 다음과 같다.
+
+extern void rotate_cw(int M, int object[4][4], int count);
+
+extern void rotate_ccw(int M, int object[4][4], int count);
+
+MxM(최대4) 크기의 object가 주어지고 rotate_cw는 시계방향으로 rotate_ccw는 반시계방향으로 90도 회전시킨다.
+
+count는 90도 회전을 몇번 시킬지를 나타낸다.
+*/
 
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
@@ -52,10 +51,8 @@ static int test_rotate() {
 			for (int k = 0; k < M; ++k) {
 				scanf("%d", &c);
 				if (object[j][k] != c) score = 0;
-				printf("object[%d][%d] = %d / %d\n", j, k, object[j][k], c);
 			}
 		}
-		printf("\n");
 	}
 
 	return score;
