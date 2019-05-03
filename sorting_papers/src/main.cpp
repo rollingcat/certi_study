@@ -219,7 +219,7 @@ int main()
 {
 	int T;
 	setbuf(stdout, NULL);
-	freopen("sample_input.txt", "r", stdin);
+	freopen("sample_input_s.txt", "r", stdin);
 	scanf("%d", &T);
 	int totalScore = 0;
 	for (int t = 1; t <= T; t++) {
