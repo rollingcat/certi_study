@@ -1,0 +1,55 @@
+3
+7 11
+1 / aa
+1 / bb
+1 /aa/ cc
+1 /bb/ dd
+3 /bb/ /aa/
+4 /aa/cc/ /
+5 / 6
+4 /bb/ /cc/
+5 /cc/ 2
+2 /cc/
+5 / 3
+7 10
+1 / du
+1 /du/ pan
+1 / vibc
+4 /du/ /vibc/
+4 /vibc/du/ /
+1 /du/pan/ mvgbov
+1 /du/pan/mvgbov/ zkjsxy
+4 /du/pan/ /vibc/
+1 /du/ nurw
+5 / 6
+15 30
+1 / arwre
+1 /arwre/ js
+1 /arwre/js/ jk
+1 /arwre/js/jk/ jivyv
+1 /arwre/js/ qtktwt
+1 /arwre/js/ qn
+1 / lw
+5 /arwre/js/qn/ 0
+5 /arwre/js/jk/jivyv/ 0
+5 /arwre/js/ 4
+4 /arwre/js/jk/ /lw/
+1 /arwre/js/qtktwt/ xarkj
+4 /arwre/js/qn/ /lw/jk/
+4 /lw/jk/ /arwre/js/qtktwt/
+4 /arwre/js/qtktwt/jk/qn/ /arwre/js/
+4 /arwre/js/qtktwt/jk/ /lw/
+5 /arwre/js/ 3
+4 /arwre/js/qn/ /lw/
+4 /lw/jk/ /
+1 /lw/qn/ jmjajm
+1 /arwre/js/ wp
+4 /arwre/js/wp/ /lw/qn/jmjajm/
+4 /lw/ /jk/jivyv/
+1 /arwre/js/ dydql
+1 /jk/jivyv/lw/qn/jmjajm/ fszafu
+4 /jk/ /arwre/js/qtktwt/
+1 /arwre/js/qtktwt/jk/jivyv/lw/qn/jmjajm/fszafu/ lu
+4 /arwre/js/qtktwt/jk/jivyv/lw/ /arwre/js/qtktwt/jk/
+1 /arwre/js/qtktwt/jk/lw/ dypel
+5 / 14
