@@ -7,6 +7,7 @@
 
 struct Dir {
   char name[NAME_MAXLEN + 1];
+  int name_len;
   Dir* parent;
   Dir* children[MAX_CHILD_NUM];
   int children_num;
@@ -37,16 +38,19 @@ Dir* CopyDir(Dir* src);
 
 #define NEW_DIR &system[alloc_idx++];
 
-void Dir::SetName(char* str, int name_len) {
-  if (name_len < 0)
+void Dir::SetName(char* str, int len) {
+  if (len < 0) {
     mstrcpy(name, str);
-  else
-    mstrncpy(name, str, name_len);
+    name_len = mstrlen(name);
+  } else {
+    mstrncpy(name, str, len);
+    name_len = len;
+  }
 }
 
-Dir* Dir::GetChild(char* str, int name_len) {
+Dir* Dir::GetChild(char* str, int len) {
   for (int i = 0; i < children_num; ++i) {
-    if (!mstrncmp(children[i]->name, str, name_len))
+    if (children[i]->name_len == len && !mstrncmp(children[i]->name, str, len))
       return children[i];
   }
   return 0; // ASSERT
@@ -66,19 +70,6 @@ void Dir::DetachChild(Dir* dir) {
   }
 
   children[idx] = children[--children_num];
-//  dummy.sibling = children;
-//  Dir* prev = &dummy;
-//  Dir* child = children;
-//  for (int i = 0; i < children_num; ++i) {
-//    if (child == dir) {
-//      prev->sibling = child->sibling;
-//      break;
-//    }
-//    prev = child;
-//    child = child->sibling;
-//  }
-//  children = dummy.sibling;
-//  --children_num;
 }
 
 void Dir::CopyChild(Dir* src) {
@@ -176,10 +167,6 @@ void cmd_mv(char srcPath[PATH_MAXLEN + 1], char dstPath[PATH_MAXLEN + 1]) {
 }
 
 int cmd_find(char path[PATH_MAXLEN + 1]) {
-  static const char* debug = "/cxyvef/zg/nk/fgls/";
-  if (!mstrcmp(debug, path))
-    printf("%s\n", path);
-
   Dir* current = Go(&root, &path[1]);
   return current->total_dir;
 }
